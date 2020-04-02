@@ -4,6 +4,7 @@
 	$_SESSIN["rol"]="";
 	$_SESSION["login"]=false;
 
+	// PRUEBA DE COMMIT
 ?>
 
 
