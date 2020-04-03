@@ -1,7 +1,13 @@
+<?php session_start(); 
+
+	$_SESSION["nombre"]="";
+	$_SESSIN["rol"]="";
+	$_SESSION["login"]=false;
+
+?>
+
+
 <!DOCTYPE html>
-<?php 
-  session_start(); 
-  ?>
 <html>
 <head>
 	<title>Login</title>
@@ -34,13 +40,13 @@
 				</header>
 	<!-- LOGIN -->
 				<section id="banner">
-					<h2>Formulario de registro</h2>
-					<form action="procesarAlta.php" method="POST">
+				<h2>Bienvenido a iVELiTE</h2>
+					<form action="procesarLogin.php" method="POST">
 					<fieldset>
-					<p>Email: <input type="text" name="email" placeholder="Enter your email"/></p>
+					<p>Usuario y contraseña</p>
 					<p>Name: <input type="text" name="username" placeholder="Enter your name"/></p>
 					<p>Password: <input type="password" name="password" placeholder="Enter your pass"/></p>
-					<button class="button primary" type="submit">Registrarse</button>
+					<button class="button primary" type="submit">Entrar</button>
 					</fieldset>
 					</form>
 				</section>	

@@ -9,9 +9,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	
-
-  
 	<body class="landing is-preload">
 		<div id="page-wrapper">
 			<!-- Header -->
@@ -27,11 +24,13 @@
 									<li><a href="foro.html">Foro</a></li>
 									<li><a href="nosotros.html">Sobre nosotros</a></li>
 									<li><a href="guiasturisticas.html">Guias Turisticas</a></li>
+
 								</ul>
 							</li>
 
 						</ul>
 					</nav>
+
 				</header>
 
 			<!-- Banner -->
@@ -46,7 +45,6 @@
 								echo  '<li><a href="alta.php" class="button primary">REGISTRATE</a></li>';
 							}
 							?>
-						
 					</ul>
 				</section>			
 
