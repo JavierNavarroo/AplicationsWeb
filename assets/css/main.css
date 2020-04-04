@@ -2676,16 +2676,17 @@
 	table {
 		margin: 0 0 2em 0;
 		width: 100%;
+		background-color:#959596;
 	}
 
 		table tbody tr {
-			border: solid 1px #e5e5e5;
+			/* border: solid 1px #646464; */
 			border-left: 0;
 			border-right: 0;
 		}
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: #f8f8f8;
+				background-color: #646464;
 			}
 
 		table td {
@@ -2693,19 +2694,23 @@
 		}
 
 		table th {
-			color: #646464;
+			color: #000000;
+			background-color: #adaaaa;
 			font-size: 0.9em;
 			font-weight: 300;
 			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
+			text-align: center;
 		}
 
 		table thead {
-			border-bottom: solid 2px #e5e5e5;
+			/* border-bottom: solid 2px #646464; */
+			border-bottom: transparent;
+
 		}
 
 		table tfoot {
-			border-top: solid 2px #e5e5e5;
+			/* border-top: solid 2px #e5e5e5; */
+			border-top: transparent;
 		}
 
 		table.alt {

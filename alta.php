@@ -21,6 +21,7 @@
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Menú</a>
 								<ul>
+									<li><a href="micuenta.html">Mi cuenta</a></li>
 									<li><a href="buscador.html">Buscador</a></li>
 									<li><a href="contacto.html">Contacto</a></li>
 									<li><a href="foro.html">Foro</a></li>

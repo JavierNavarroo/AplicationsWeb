@@ -16,18 +16,18 @@
 		<div id="page-wrapper">
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1><a href="home.php">IVELITE</a> tu agencia de viajes.</h1>
+					<h1><a href="buscador.html">IVELITE</a> tu agencia de viajes.</h1>
 					<nav id="nav">
 						<ul>
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Menú</a>
 								<ul>
+									<li><a href="micuenta.html">Mi cuenta</a></li>
 									<li><a href="buscador.html">Buscador</a></li>
 									<li><a href="contacto.html">Contacto</a></li>
 									<li><a href="foro.html">Foro</a></li>
 									<li><a href="nosotros.html">Sobre nosotros</a></li>
 									<li><a href="guiasturisticas.html">Guias Turisticas</a></li>
-									<li><a href="micuenta.html">Mi cuenta</a></li>
 								</ul>
 							</li>
 							 
@@ -43,7 +43,7 @@
 					</nav>
 				</header>
 
-			<!-- Banner -->
+				<!-- Banner -->
 				<section id="banner">
 					<h2>HOME IVELITE</h2>
 					<p>Bienvenido a tu portal web, ¿qué te trae por aquí?.</p>

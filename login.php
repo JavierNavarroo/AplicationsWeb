@@ -21,13 +21,14 @@
 		<div id="page-wrapper">
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1><a href="index.php">IVELITE</a> tu agencia de viajes.</h1>
+					<h1><a href="buscador.html">IVELITE</a> tu agencia de viajes.</h1>
 					<nav id="nav">
 						<ul>
 							<li><a href="index.php">Inicio</a></li>
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Menú</a>
 								<ul>
+									<li><a href="micuenta.html">Mi cuenta</a></li>
 									<li><a href="buscador.html">Buscador</a></li>
 									<li><a href="contacto.html">Contacto</a></li>
 									<li><a href="foro.html">Foro</a></li>
