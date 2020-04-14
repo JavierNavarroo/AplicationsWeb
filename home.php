@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 
 <?php 
-    session_start(); 
+    session_start();
 	?>
 <html>
 
@@ -16,14 +16,13 @@
 		<div id="page-wrapper">
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1><a href="buscador.html">IVELITE</a> tu agencia de viajes.</h1>
+					<h1><a href="home.php">IVELITE</a> tu agencia de viajes.</h1>
 					<nav id="nav">
 						<ul>
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Menú</a>
 								<ul>
 									<li><a href="micuenta.html">Mi cuenta</a></li>
-									<li><a href="buscador.html">Buscador</a></li>
 									<li><a href="contacto.html">Contacto</a></li>
 									<li><a href="foro.html">Foro</a></li>
 									<li><a href="nosotros.html">Sobre nosotros</a></li>
@@ -31,7 +30,6 @@
 								</ul>
 							</li>
 							 
-							
 							<?php 
 							if($_SESSION["login"] || $_SESSION["alta"] ){
 								echo  '<li><a href="logout.php" class="button">Logout</a></li>';
@@ -47,9 +45,37 @@
 				<section id="banner">
 					<h2>HOME IVELITE</h2>
 					<p>Bienvenido a tu portal web, ¿qué te trae por aquí?.</p>
-				</section>			
 
-			
+					<div class="container">
+					<div class="newbox"> 	<!-- LA CLASE NEWBOX ES CREADA DE CERO -->
+						<form method="post" action="#">
+							<div class="row gtr-50 gtr-uniform">
+								<div class="col-6 col-12-mobilep">
+									<input type="textbuscador" name="origen" id="origen" value="" placeholder="Origen" />
+								</div>
+								<div class="col-6 col-12-mobilep">
+									<input type="textbuscador" name="destino" id="destino" value="" placeholder="Destino" />
+								</div>
+								<div class="col-12" >
+									<div class="centro">
+										<p type="text">Elije la fecha de inicio: 
+											<input type="date" id="start" name="trip-start" >
+										</p>
+									</div>	
+								</div>
+							</div>
+							<br>
+							<div class="col-12">
+								<ul class="actions special">
+									<li><input type="submit" value="Buscar" /></li>
+								</ul>
+							</div>
+						</form>		
+					</div>
+					</div>	
+				</section>	
+
+							
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
