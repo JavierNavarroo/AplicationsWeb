@@ -1,4 +1,15 @@
 <!DOCTYPE HTML>
+	<!-- Scripts -->
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			<script src="assets/js/buscador.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
 
 <?php 
     session_start();
@@ -27,6 +38,7 @@
 									<li><a href="foro.html">Foro</a></li>
 									<li><a href="nosotros.html">Sobre nosotros</a></li>
 									<li><a href="guiasturisticas.html">Guias Turisticas</a></li>
+									<li><a href="misviajes.html">Mis viajes</a></li>
 								</ul>
 							</li>
 							 
@@ -58,8 +70,8 @@
 								</div>
 								<div class="col-12" >
 									<div class="centro">
-										<p type="text">Elije la fecha de inicio: 
-											<input type="date" id="start" name="trip-start" >
+									<p type="text">Elije la fecha de la ida: 
+											<input type="date" id="start" name="trip-start">
 										</p>
 									</div>	
 								</div>
@@ -67,8 +79,13 @@
 							<br>
 							<div class="col-12">
 								<ul class="actions special">
-									<li><input type="submit" value="Buscar" /></li>
+									<li><input type="submit" value="Buscar" id="idbotonbusqueda"/></li>
 								</ul>
+							</div>
+							<br>
+							<div id= "datos">
+
+
 							</div>
 						</form>		
 					</div>
@@ -86,14 +103,7 @@
 			<!-- end Footer -->
 		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	
 
 	</body>
 </html>

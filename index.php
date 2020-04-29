@@ -60,8 +60,9 @@
 								</div>
 								<div class="col-12" >
 									<div class="centro">
-										<p type="text">Elije la fecha de inicio: 
+										<p type="text">Elije la fecha de inicio y fin: 
 											<input type="date" id="start" name="trip-start" >
+											<input type="date" id="end" name="trip-start" >
 										</p>
 									</div>	
 								</div>
