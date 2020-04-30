@@ -36,7 +36,7 @@ if(count($result) === 0) {
 		$result[] = "El usuario ya existe";
 	} else {
 		$_SESSION['login'] = true;
-		$_SESSION['nombre'] = $nombreUsuario;
+		$_SESSION['nombre'] = $username;
 		$result = 'index.php';
 	}
 }
