@@ -1,8 +1,8 @@
 <?php	
 
 	
-require_once __DIR__.'/includes/config.php';
-require_once __DIR__.'/includes/Usuario.php';
+require_once __DIR__.'/assets/conf/config.php';
+require_once __DIR__.'/assets/conf/Usuario.php';
 
 
 if (! isset($_POST['login']) ) {
@@ -40,7 +40,6 @@ if(count($result) === 0) {
 		$result = 'index.php';
 	}
 }
-return $result;
-}
+
 
 ?>	

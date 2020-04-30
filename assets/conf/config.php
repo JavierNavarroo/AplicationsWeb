@@ -1,6 +1,6 @@
 <?php
 
-require_once__DIR_.'/assets/conf/config.php';
+require_once __DIR__.'/Aplicacion.php';
 
 /**
  * Parámetros de conexión a la BD
