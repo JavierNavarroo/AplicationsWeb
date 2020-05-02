@@ -1,7 +1,9 @@
 <!DOCTYPE HTML>
+		
 <?php 
   session_start(); 
   ?>
+
 <html>
 	<head>
 		<title>IVELITE</title>
@@ -43,7 +45,7 @@
 						<li><a href="login.php" class="button primary">LOGIN</a></li>
 						    <?php 
 							if (!$_SESSION["login"] || !$_SESSION["alta"]){
-								echo  '<li><a href="alta.php" class="button primary">REGISTRATE</a></li>';
+								echo '<li><a href="alta.php" class="button primary">REGISTRATE</a></li>';
 							}
 							?>
 					</ul>
@@ -92,7 +94,9 @@
 			<!-- end Footer -->
 		</div>
 
-		<!-- Scripts -->
+			 <!-- Scripts -->
+			 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			<script src="assets/js/buscador.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -100,6 +104,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>

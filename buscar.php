@@ -1,6 +1,5 @@
 <?php
 
-//$mysqli = new mysqli("localhost","root","","ejemplo");
 $db_host="localhost";
 $db_name="ivelite_login";
 $db_user="root";

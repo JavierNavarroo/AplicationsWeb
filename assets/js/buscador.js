@@ -15,8 +15,7 @@ function buscar_vuelos(consulta){
     })
 }
 
-$(document).on('keyup','#idbotonbusqueda', function(){
-    console.log( "Mensaje informativo");
+$(document).on('click','#idbotonbusqueda', function(){ //mirar click
     var valor = (this).val();
     if(valor != ""){
         buscar_vuelos(valor);
