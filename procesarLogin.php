@@ -1,54 +1,48 @@
+
 <?php
 	
-require_once __DIR__.'/includes/config.php';
-require_once __DIR__.'/includes/Usuario.php';
+	require_once __DIR__.'/assets/conf/config.php';
+	require_once __DIR__.'/assets/conf/Usuario.php';
 
 
-if (! isset($_POST['login']) ) {
-    header('Location: login.php');
-    exit();
-}
 
+	$nombreUsuario = isset($_POST['username']) ? $_POST['username'] : null;
 
-$nombreUser =  htmlspecialchars(trim(strip_tags($_REQUEST["username"])));
-
-if (empty($nombreUser)){
-	echo "El nombre de usuario no puede estar vacio.";
-}
-
-$password = htmlspecialchars(trim(strip_tags($_REQUEST["password"])));
-if(empty($password)){
-	echo "La contraseña no puede estar vacia.";
-}
-
-$result = array();
-
-if(count($result) === 0) {
-	$usuario = Usuario::buscaUsuario($nombreUser);
-
-	if(!usuario) {
-		$result = "El usuario o la contraseña no coinciden";
+	if ( empty($nombreUsuario) ) {
+	  echo "<script>
+			alert('El nombre no puede estar vacio');
+			window.location= 'login.php'
+			</script>";
 	}
+
+	$password = isset($_POST['password']) ? $_POST['password'] : null;
+	if ( empty($password) ) {
+	   echo "<script>
+			alert('La contraseña no puede estar vacia');
+			window.location= 'login.php'
+			</script>";
+	}
+
+
+    $usuario = Usuario::login($nombreUsuario, $password);
+	
+    if (!$usuario) {
+        echo "<script>
+			alert('el nombre o la contraseña no coinciden, intentelo de nuevo');
+			window.location= 'login.php'
+			</script>";
+    }
 
 	else {
-		if($usuario->compruebaPassword($password)){
-			$_SESSION['login'] = true;
-			$_SESSION['nombre'] = $nombreUser;
-			$_SESSION['esAdmin'] = strcmp($usuario->rol(), 'admin') == 0 ? true : false;
-
-			if($_SESSION["login"]){
-				echo ' Bienvenido' .$_SESSION["nombre"]. ', tu rol es'  . $_SESSION["rol"];
-				echo "<script>
-				alert('BIENVENIDO A TU BUSCADOR DE VUELOS');
-				window.location= 'home.php'
-					  </script>";
-			  }
-		}
-		else {
-			$result = "El usuario o la contraseña no coinciden";
-		}
-	}
-}
+ 
+		$_SESSION['login'] = true;
+		$_SESSION['nombre'] = $usuario->userName();
+		// Comparación de string segura a nivel binario devuelve 0 si son iguales
+		$_SESSION['esAdmin'] = strcmp($usuario->rol(), 'ADMIN') == 0 ? true : false;
+		 echo "<script>
+			alert('Bienvenido a tu buscador de vuelos, {$_SESSION['nombre']}');
+			window.location= 'home.php'
+			</script>";
+    }
 
 ?>
-

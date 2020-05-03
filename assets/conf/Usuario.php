@@ -1,5 +1,4 @@
 <?php
-namespace es\ucm\fdi\aw;
 
 class Usuario
 {
@@ -14,7 +13,7 @@ class Usuario
     }
 
     public static function buscaUsuario($userName)
-    {
+    { 
         $app = Aplicacion::getSingleton();
         $conn = $app->conexionBd();
         $query = sprintf("SELECT * FROM usuarios U WHERE U.user = '%s'", $conn->real_escape_string($userName));
@@ -23,8 +22,8 @@ class Usuario
         if ($rs) {
             if ( $rs->num_rows == 1) {
                 $fila = $rs->fetch_assoc();
-                $user = new Usuario($fila['userName'], $fila['email'], $fila['password'], $fila['rol']);
-                $user->id = $fila['id'];
+                $user = new Usuario($fila['user'], $fila['email'], $fila['pass'], $fila['rol']);
+               // $user->id = $fila['id'];
                 $result = $user;
             }
             $rs->free();
@@ -35,7 +34,7 @@ class Usuario
         return $result;
     }
     
-    public static function crea($userName, $email, $password, $rol)
+    public static function alta($userName, $email, $password, $rol)
     {
         $user = self::buscaUsuario($userName);
         if ($user) {
@@ -64,9 +63,9 @@ class Usuario
         $conn = $app->conexionBd();
         $query=sprintf("INSERT INTO usuarios (user, pass, rol, email) VALUES('%s', '%s', '%s', '%s')"
             , $conn->real_escape_string($usuario->userName)
-            , $conn->real_escape_string($usuario->email)
             , $conn->real_escape_string($usuario->password)
-            , $conn->real_escape_string($usuario->rol));
+            , $conn->real_escape_string($usuario->rol)
+            , $conn->real_escape_string($usuario->email));
         if ( $conn->query($query) ) {
             $usuario->id = $conn->insert_id;
         } else {
@@ -111,7 +110,7 @@ class Usuario
 
     private function __construct($userName, $email, $password, $rol)
     {
-        $this->userName= $user;
+        $this->userName= $userName;
         $this->email = $email;
         $this->password = $password;
         $this->rol = $rol;

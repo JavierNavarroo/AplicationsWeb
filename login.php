@@ -3,10 +3,8 @@
 	$_SESSION["nombre"]="";
 	$_SESSIN["rol"]="";
 	$_SESSION["login"]=false;
-
-	// PRUEBA DE COMMIT
+	
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -65,6 +63,6 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>				
+			<script src="assets/js/main.js"></script>					
 </body>
 </html>
