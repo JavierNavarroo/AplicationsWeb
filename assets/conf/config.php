@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD
 require_once __DIR__.'/Aplicacion.php';
-=======
-require_once '../iVELiTE/assets/conf/Aplicacion.php';
->>>>>>> master
 
 /**
  * Parámetros de conexión a la BD
