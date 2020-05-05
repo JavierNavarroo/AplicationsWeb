@@ -22,3 +22,5 @@ $(document).on('click','#idbotonbusqueda', function(){ //mirar click
     }
 })
 
+
+

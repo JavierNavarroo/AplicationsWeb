@@ -1,7 +1,7 @@
 <?php
 
-	require_once __DIR__. '/assets/conf/config.php';
-	require_once __DIR__.'/assets/conf/Usuario.php';
+	require_once  '..\conf\config.php';
+	require_once '..\conf\Usuario.php';
 	
 
 	$nombreUsuario = isset($_POST['username']) ? $_POST['username'] : null;
@@ -52,10 +52,8 @@
 		echo $usuario->userName();
 		
 		echo "<script>
-			alert('Bienvenido a bordo {$usuario->userName()}, su rol es {$_SESSION['rol']}');
-			window.location= 'home.php'
+			window.location= '../../home.php'
 		    </script>";
 	}
-	
 	
 ?>

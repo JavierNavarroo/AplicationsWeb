@@ -1,10 +1,9 @@
 
 <?php
 	
-	require_once __DIR__.'/assets/conf/config.php';
-	require_once __DIR__.'/assets/conf/Usuario.php';
-
-
+	require_once '..\conf\config.php';
+	require_once '..\conf\Usuario.php';
+	
 
 	$nombreUsuario = isset($_POST['username']) ? $_POST['username'] : null;
 
@@ -41,7 +40,7 @@
 		$_SESSION['esAdmin'] = strcmp($usuario->rol(), 'ADMIN') == 0 ? true : false;
 		 echo "<script>
 			alert('Bienvenido a tu buscador de vuelos, {$_SESSION['nombre']}');
-			window.location= 'home.php'
+			window.location= '../../home.php'
 			</script>";
     }
 

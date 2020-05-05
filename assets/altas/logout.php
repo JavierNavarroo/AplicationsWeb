@@ -10,5 +10,5 @@
 	$_SESSION["login"]=false;
         $_SESSION["alta"]=false;
 
-        header('Location: ../iVELiTE/index.php'); 
+        header('Location: ../../index.php'); 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-require_once '../iVELiTE/assets/conf/Aplicacion.php';
+require_once 'Aplicacion.php';
 
 /**
  * Parámetros de conexión a la BD
