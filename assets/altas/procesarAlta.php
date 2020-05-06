@@ -3,11 +3,6 @@
 	require_once  '..\conf\config.php';
 	require_once '..\conf\Usuario.php';
 	
-<<<<<<< HEAD
-require_once __DIR__.'/assets/conf/config.php';
-require_once __DIR__.'/assets/conf/Usuario.php';
-=======
->>>>>>> master
 
 	$nombreUsuario = isset($_POST['username']) ? $_POST['username'] : null;
 
@@ -60,17 +55,8 @@ require_once __DIR__.'/assets/conf/Usuario.php';
 			window.location= '../../home.php'
 		    </script>";
 	}
-<<<<<<< HEAD
-}
+
+
 
 
 ?>	
-=======
-	
-<<<<<<< HEAD:procesarAlta.php
-	
-?>
->>>>>>> master
-=======
-?>
->>>>>>> master:assets/altas/procesarAlta.php
