@@ -43,6 +43,8 @@ CREATE TABLE `vuelos` (
 INSERT INTO `vuelos` (`idVuelo`, `Origen`, `Destino`, `Fecha`, `Precio`) VALUES
 ('001', 'Madrid', 'Barcelona', '2020-04-30', 50),
 ('002', 'Barcelona', 'Madrid', '2020-05-21', 46);
+('003', 'Madrid', 'Canarias', '2020-06-11', 100);
+('004', 'Barcelona', 'Canarias', '2020-07-02', 76);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
