@@ -59,7 +59,7 @@
 								<div class="col-12" >
 									<div class="centro">
 									<p type="text">Elije la fecha de la ida: 
-											<input type="date" id="start" name="start">
+											<input type="date" id="start" name="trip-start">
 										</p>
 									</div>	
 								</div>

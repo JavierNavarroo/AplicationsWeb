@@ -52,7 +52,7 @@
 					
 					<div class="container">
 					<div class="newbox"> 	<!-- LA CLASE NEWBOX ES CREADA DE CERO -->
-						<form method="post" action="buscar.php">
+						<form method="post" action="#">
 							<div class="row gtr-50 gtr-uniform">
 								<div class="col-6 col-12-mobilep">
 									<input type="textbuscador" name="origen" id="origen" value="" placeholder="Origen" />
@@ -63,8 +63,8 @@
 								<div class="col-12" >
 									<div class="centro">
 										<p type="text">Elije la fecha de inicio y fin: 
-											<input type="date" id="start" name="start" >
-											<input type="date" id="end" name="end" >
+											<input type="date" id="start" name="trip-start" >
+											<input type="date" id="end" name="trip-start" >
 										</p>
 									</div>	
 								</div>
