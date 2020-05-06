@@ -33,7 +33,7 @@
 							 
 							<?php 
 							if($_SESSION["login"] || $_SESSION["alta"] ){
-								echo  '<li><a href="logout.php" class="button">Logout</a></li>';
+								echo  '<li><a href="assets/altas/logout.php" class="button">Logout</a></li>';
 							}
 							?>
 
@@ -72,7 +72,7 @@
 							</div>
 							<br>
 							<div id= "datos">
-
+							
 
 							</div>
 						</form>		
@@ -84,8 +84,8 @@
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
-						<li><a href="https://www.facebook.com/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.facebook.com/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 					</ul>
 				</footer>
 			<!-- end Footer -->

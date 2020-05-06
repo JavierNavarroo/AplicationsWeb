@@ -42,23 +42,24 @@
 				</p>
 
 				<ul class="actions special">
-						<li><a href="login.php" class="button primary">LOGIN</a></li>
+						<li><a href="assets/altas/login.php" class="button primary">LOGIN</a></li>
 						    <?php 
-							if (!$_SESSION["login"] || !$_SESSION["alta"]){
-								echo '<li><a href="alta.php" class="button primary">REGISTRATE</a></li>';
+							if (!isset($_SESSION["login"])  || !isset($_SESSION["alta"])){
+								echo '<li><a href="assets/altas/alta.php" class="button primary">REGISTRATE</a></li>';
 							}
 							?>
 					</ul>
 					
 					<div class="container">
 					<div class="newbox"> 	<!-- LA CLASE NEWBOX ES CREADA DE CERO -->
+					<p>Aqui puedes buscar los vuelos con los filtros que apliques</p>
 						<form method="post" action="#">
 							<div class="row gtr-50 gtr-uniform">
 								<div class="col-6 col-12-mobilep">
-									<input type="textbuscador" name="origen" id="origen" value="" placeholder="Origen" />
+									<input type="textbuscador" name="origen" id="origen" value="" placeholder="Origen"/>
 								</div>
 								<div class="col-6 col-12-mobilep">
-									<input type="textbuscador" name="destino" id="destino" value="" placeholder="Destino" />
+									<input type="textbuscador" name="destino" id="destino" value="" placeholder="Destino"/>
 								</div>
 								<div class="col-12" >
 									<div class="centro">
@@ -76,19 +77,13 @@
 								</ul>
 							</div>
 						</form>		
-					</div>
-					</div>
-
-					
-					
-					
 				</section>			
 
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
-						<li><a href="https://www.facebook.com/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.facebook.com/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 					</ul>
 				</footer>
 			<!-- end Footer -->
