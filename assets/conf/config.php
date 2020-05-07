@@ -1,6 +1,8 @@
 <?php
 
+
 require_once 'Aplicacion.php';
+
 
 /**
  * Parámetros de conexión a la BD
