@@ -33,8 +33,8 @@
 				<h2>Cambiar su contraseña</h2>
 					<form action="procesarCambiarPass.php" method="POST">
 					<fieldset>
-                    <p>Nueva contraseña: <input type="password" name="oldpass" placeholder="Enter your new password"/></p>
-                    <p>Confirma contraseña: <input type="password" name="newpass" placeholder="Enter your old password"/></p>
+                    <p>Nueva contraseña: <input type="password" name="newpass" placeholder="Enter your new password"/></p>
+                    <p>Confirma contraseña: <input type="password" name="oldpass" placeholder="Enter your old password"/></p>
 					<button class="button primary" type="submit">Confirmar</button>
 					</fieldset>
 					</form>
