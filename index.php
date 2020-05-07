@@ -44,7 +44,7 @@
 				<ul class="actions special">
 						<li><a href="assets/altas/login.php" class="button primary">LOGIN</a></li>
 						    <?php 
-							if (!isset($_SESSION["login"])  || !isset($_SESSION["alta"])){
+							if (!($_SESSION["login"]) || !($_SESSION["alta"])){
 								echo '<li><a href="assets/altas/alta.php" class="button primary">REGISTRATE</a></li>';
 							}
 							?>

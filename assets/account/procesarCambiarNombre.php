@@ -6,7 +6,7 @@
     $nuevoNombre = htmlspecialchars(trim(strip_tags($_REQUEST['username'])));
 
     if($nuevoNombre != ""){
-        $newName = Usuario::nuevoNombre($nuevoNombre, $_SESSION['nombre']);); 
+        $newName = Usuario::nuevoNombre($nuevoNombre, $_SESSION['nombre']); 
 
         if($newName){
             $_SESSION['nombre'] = $newName; 
