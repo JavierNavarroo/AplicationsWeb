@@ -8,7 +8,7 @@
 
     if($newPass != ""){
         $usuario = Usuario::buscaUsuario($_SESSION['nombre']); 
-        
+		
         if($usuario){
             if($usuario->compruebaPassword($oldPass)){
                 if(Usuario::cambiaPassword($newPass,$_SESSION['nombre'])){

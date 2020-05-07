@@ -44,7 +44,7 @@ class Usuario
         return self::guarda($user);
     }
     
-    private static function hashPassword($password)
+    public static function hashPassword($password)
     {
         return password_hash($password, PASSWORD_DEFAULT);
     }
@@ -98,7 +98,7 @@ class Usuario
         return $usuario;
     }
 
-    private static function nuevoNombre($newName, $oldName)
+    public static function nuevoNombre($newName, $oldName)
     {
         $app = Aplicacion::getSingleton();
         $conn = $app->conexionBd();
@@ -141,7 +141,7 @@ class Usuario
 		$app = Aplicacion::getSingleton();
         $conn = $app->conexionBd();
 		
-		$hashPass = hashPassword($nuevoPassword);
+		$hashPass = self::hashPassword($nuevoPassword);
 		
         $query = sprintf("UPDATE usuarios U SET pass = '%s' WHERE U.user='%s'"
 		, $hashPass
@@ -155,17 +155,17 @@ class Usuario
 		return $result;
     }
     
-    private $id;
+    public $id;
 
-    private $userName;
+    public $userName;
 
-    private $email;
+    public $email;
 
-    private $password;
+    public $password;
 
-    private $rol;
+    public $rol;
 
-    private function __construct($userName, $email, $password, $rol)
+    public function __construct($userName, $email, $password, $rol)
     {
         $this->userName= $userName;
         $this->email = $email;
