@@ -36,12 +36,12 @@
 			<!-- Banner -->
 				<section id="banner">
 					
-				<h2>IVELITE</h2>
-				<p>Las mejores ofertas de vuelos y viajes, adéntrate en tu mundo interior descubriendo el exterior.
-				Si no te has registrado aun para obtener mas ofertas, ¿a qué esperas?.
-				</p>
+					<h2>IVELITE</h2>
+					<p>Las mejores ofertas de vuelos y viajes, adéntrate en tu mundo interior descubriendo el exterior.
+					Si no te has registrado aun para obtener mas ofertas, ¿a qué esperas?.
+					</p>
 
-				<ul class="actions special">
+					<ul class="actions special">
 						<li><a href="assets/altas/login.php" class="button primary">LOGIN</a></li>
 						    <?php 
 							if (!isset($_SESSION["login"])  || !isset($_SESSION["alta"])){
