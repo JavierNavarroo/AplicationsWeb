@@ -33,9 +33,11 @@ div.gallery {
   /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
-  position: relative;
+  position: center;
   margin: auto;
+ 
 }
+
 
 /* Hide the images by default */
 .mySlides {
@@ -111,6 +113,9 @@ div.gallery {
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+  height: 200;
+  width: 300;
+  margin-top:400px;
 }
 
 @-webkit-keyframes fade {
