@@ -22,7 +22,7 @@
 								<a href="#" class="icon solid fa-angle-down">Menú</a>
 								<ul>
 									<li><a href="contacto.html">Contacto</a></li>
-									<li><a href="foro.html">Foro</a></li>
+									<li><a href="foro.php">Foro</a></li>
 									<li><a href="nosotros.html">Sobre nosotros</a></li>
 									<li><a href="guiasturisticas.html">Guias Turisticas</a></li>
 								</ul>
@@ -36,15 +36,15 @@
 			<!-- Banner -->
 				<section id="banner">
 					
-					<h2>IVELITE</h2>
-					<p>Las mejores ofertas de vuelos y viajes, adéntrate en tu mundo interior descubriendo el exterior.
-					Si no te has registrado aun para obtener mas ofertas, ¿a qué esperas?.
-					</p>
+				<h2>IVELITE</h2>
+				<p>Las mejores ofertas de vuelos y viajes, adéntrate en tu mundo interior descubriendo el exterior.
+				Si no te has registrado aun para obtener mas ofertas, ¿a qué esperas?.
+				</p>
 
-					<ul class="actions special">
+				<ul class="actions special">
 						<li><a href="assets/altas/login.php" class="button primary">LOGIN</a></li>
 						    <?php 
-							if (!($_SESSION["login"]) || !($_SESSION["alta"])){
+							if (!isset ($_SESSION['usuario'])){
 								echo '<li><a href="assets/altas/alta.php" class="button primary">REGISTRATE</a></li>';
 							}
 							?>

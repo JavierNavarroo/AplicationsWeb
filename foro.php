@@ -36,51 +36,45 @@
             <!-- Main -->
 
                     
-            
-            
             <section id="banner">
-                <h2>Foro iVELite</h2>
+                <h2>Foro iVELiTE</h2>
                 
                 <div class="container">
+				
                 <table id="foro">
                     <thead>
                     <tr class="info">
                         <th>Nombre</th>
                         <th>Tema</th>
-                        <th>Rol</th>
+                        <th>Respuestas</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Pablo</td>
-                        <td>Madrid en primavera</td>
-                        <td>Admin</td>
-                    </tr>      
-                    <tr>
-                        <td>Iker</td>
-                        <td>Reintegro por la cuarentena</td>
-                        <td>user</td>
-                    </tr>
-                    <tr>
-                    <td>Iker</td>
-                    <td>Reintegro por la cuarentena</td>
-                    <td>user</td>
-                    </tr>
-                    <tr>
-                        <td>Iker</td>
-                        <td>Reintegro por la cuarentena</td>
-                        <td>user</td>
-					</tr>
-					<tr>
-                        <td>Javi</td>
-                        <td>Problemas en el aeropuerto</td>
-                        <td>User</td>
-					</tr>
-                    <tr class="warning">
-                        <td>Warning</td>
-                        <td>MI maleta donde esta</td>
-                        <td>user</td>
-                    </tr>
+					<?php	
+					require_once '.\assets\conf\Aplicacion.php';
+					require_once '.\assets\conf\Config.php';
+					$app = Aplicacion::getSingleton();
+					$conn = $app->conexionBd();
+					$_SESSION['ID'] = 0;
+					//$conn = Aplicacion::conexionBd();
+					$query = "SELECT * FROM  foro WHERE Identificador = 0 ORDER BY fecha DESC";
+					$result = $conn->query($query);
+					while($row = mysqli_fetch_array($result)){
+						$Autor = $row['Autor'];
+						$ID = $row['ID'];
+						if($_SESSION['ID'] < $ID){
+							$_SESSION['ID'] = $ID;
+						}
+						
+						$Titulo = $row['Titulo'];
+						$Respuestas = $row['Respuestas'];
+						echo "<tr>";
+							echo "<td>$Autor</td>";
+							echo "<td>$Titulo</td>";
+							echo "<td><a href='assets/foro/tema.php?ID=$ID'> $Respuestas </a></td>";
+						echo "</tr>";
+					}
+					?>
                     </tbody>
                 </table>
                 </div>

@@ -11,39 +11,3 @@
 .span4 .img-right {
     float: right;
 }
-
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }  
-
-  .mySlides {
-    display:none
-  }
-	.w3-left, .w3-right, .w3-badge {
-    cursor:pointer
-  }
-	.w3-badge {
-    height:15px;
-    width: 05px;
-    /*padding:0*/
-  }
-
-  .caja {
-		background: rgb(138, 138, 138);
-		border-radius: 6px;
-		box-shadow: 0 2px 0 0 #e5e5e5;
-		margin: 0 0 2em 0;
-		padding: 3em;
-	}

@@ -68,8 +68,10 @@ class Aplicacion
 	public function init($bdDatosConexion)
 	{
         if ( ! $this->inicializada ) {
-    	    $this->bdDatosConexion = $bdDatosConexion;
-    		session_start();
+			$this->bdDatosConexion = $bdDatosConexion;
+			if(!isset($_SESSION["login"])){
+				session_start();
+			}
     		$this->inicializada = true;
         }
 	}
@@ -101,6 +103,7 @@ class Aplicacion
 	 * 
 	 * @return \mysqli Conexión a MySQL.
 	 */
+
 	public function conexionBd()
 	{
 	    $this->compruebaInstanciaInicializada();

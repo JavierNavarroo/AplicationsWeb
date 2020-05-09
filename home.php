@@ -24,7 +24,7 @@
 								<ul>
 									<li><a href="micuenta.html">Mi cuenta</a></li>
 									<li><a href="contacto.html">Contacto</a></li>
-									<li><a href="foro.html">Foro</a></li>
+									<li><a href="foro.php">Foro</a></li>
 									<li><a href="nosotros.html">Sobre nosotros</a></li>
 									<li><a href="guiasturisticas.html">Guias Turisticas</a></li>
 									<li><a href="misviajes.html">Mis viajes</a></li>
@@ -32,7 +32,7 @@
 							</li>
 							 
 							<?php 
-							if($_SESSION["login"] || $_SESSION["alta"] ){
+							if (isset($_SESSION["login"])  || isset($_SESSION["alta"])){
 								echo  '<li><a href="assets/altas/logout.php" class="button">Logout</a></li>';
 							}
 							?>
