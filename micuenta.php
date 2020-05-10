@@ -1,15 +1,11 @@
 <!DOCTYPE HTML>
-<!--
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Guias Turisticas</title>
+		<title>Mi cuenta</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/propio.css" />
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -22,10 +18,10 @@
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Menú</a>
 								<ul>
-									<li><a href="micuenta.html">Mi cuenta</a></li>
-									<li><a href="contacto.html">Contacto</a></li>
-									<li><a href="foro.html">Foro</a></li>
-									<li><a href="nosotros.html">Sobre nosotros</a></li>
+									<li><a href="contacto.php">Contacto</a></li>
+									<li><a href="foro.php">Foro</a></li>
+									<li><a href="nosotros.php">Sobre nosotros</a></li>
+									<li><a href="guiasturisticas.php">Guias Turisticas</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -33,35 +29,27 @@
 				</header>
 
 			<!-- Main -->
+			
 				<section id="main" class="container">
 					<header>
-						<h2>Nuestra parte de Guias Turisticas</h2>
-						<h2>Estamos en obras...</h2>
+						<br>
+						<h2>Bienvenido a tu cuenta</h2>
+						<h1>¿Que desea hacer?</h1>
 					</header>
-					<div class="row">
-						<div class="col-12">
-
-							<!-- Text -->
-								<section class="box">
-																	
-								</section>
-
-						</div>
+					<div class="centro">
+						<a href="home.php" class="button">Cambiar Nombre</a> &nbsp;&nbsp;
+						<a href="home.php" class="button">Cambiar Contraseña</a> &nbsp;&nbsp;
+						<a href="home.php" class="button">Eliminar Cuenta</a>
 					</div>
 					<div class="row">
-						<div class="col-12">
-
-							
+						<div class="col-12">		
 				</section>
 
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="https://www.facebook.com/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					</ul>
-				</footer>
-			<!-- end Footer -->
+		<!-- Footer -->
+			<?php 
+				include('footer.php');
+			?>
+		<!-- end Footer -->
 
 		</div>
 

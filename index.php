@@ -6,10 +6,9 @@
 
 <html>
 	<head>
-		<title>IVELITE</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+			<?php 
+				include('head.php');
+			?>
 	</head>
 	<body class="landing is-preload">
 		<div id="page-wrapper">
@@ -21,10 +20,10 @@
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Menú</a>
 								<ul>
-									<li><a href="contacto.html">Contacto</a></li>
+									<li><a href="contacto.php">Contacto</a></li>
 									<li><a href="foro.php">Foro</a></li>
-									<li><a href="nosotros.html">Sobre nosotros</a></li>
-									<li><a href="guiasturisticas.html">Guias Turisticas</a></li>
+									<li><a href="nosotros.php">Sobre nosotros</a></li>
+									<li><a href="guiasturisticas.php">Guias Turisticas</a></li>
 								</ul>
 							</li>
 
@@ -48,24 +47,21 @@
 								echo '<li><a href="assets/altas/alta.php" class="button primary">REGISTRATE</a></li>';
 							}
 							?>
-					</ul>
+				</ul>
 					
-					<div class="container">
+				<div class="container">
 					<div class="newbox"> 	<!-- LA CLASE NEWBOX ES CREADA DE CERO -->
-					<p>Aqui puedes buscar los vuelos con los filtros que apliques</p>
-						<form method="post" action="#">
 							<div class="row gtr-50 gtr-uniform">
 								<div class="col-6 col-12-mobilep">
-									<input type="textbuscador" name="origen" id="origen" value="" placeholder="Origen"/>
+									<input type="textbuscador" name="origen" id="origen" value="" placeholder="Origen" />
 								</div>
 								<div class="col-6 col-12-mobilep">
-									<input type="textbuscador" name="destino" id="destino" value="" placeholder="Destino"/>
+									<input type="textbuscador" name="destino" id="destino" value="" placeholder="Destino" />
 								</div>
 								<div class="col-12" >
 									<div class="centro">
-										<p type="text">Elije la fecha de inicio y fin: 
-											<input type="date" id="start" name="trip-start" >
-											<input type="date" id="end" name="trip-start" >
+									<p type="text">Elije la fecha de la ida: 
+											<input type="date" id="start" name="trip-start">
 										</p>
 									</div>	
 								</div>
@@ -73,25 +69,26 @@
 							<br>
 							<div class="col-12">
 								<ul class="actions special">
-									<li><input type="submit" value="Buscar" /></li>
+									<li><input type="submit" value="Buscar" id="idbotonbusqueda"/></li>
 								</ul>
 							</div>
-						</form>		
+							<br>
+							<div id= "datos">							
+
+							</div>	
+					</div>
+					</div>		
 				</section>			
 
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="https://www.facebook.com/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					</ul>
-				</footer>
-			<!-- end Footer -->
+		<!-- Footer -->
+				<?php 
+				include('footer.php');
+			?>
+		<!-- end Footer -->
 		</div>
 
 			 <!-- Scripts -->
-			 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-			<script src="assets/js/buscador.js"></script>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -99,5 +96,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/buscador.js"></script>
 	</body>
 </html>

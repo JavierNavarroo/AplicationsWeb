@@ -13,8 +13,6 @@ class Usuario
     }
 
 
-
-
     public static function buscaUsuario($userName)
     { 
         $app = Aplicacion::getSingleton();

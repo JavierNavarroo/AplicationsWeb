@@ -19,10 +19,10 @@
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Menú</a>
 								<ul>
-									<li><a href="micuenta.html">Mi cuenta</a></li>
-									<li><a href="contacto.html">Contacto</a></li>
-									<li><a href="foro.html">Foro</a></li>
-									<li><a href="guiasturisticas.html">Guias Turisticas</a></li>
+									<li><a href="micuenta.php">Mi cuenta</a></li>
+									<li><a href="contacto.php">Contacto</a></li>
+									<li><a href="foro.php">Foro</a></li>
+									<li><a href="guiasturisticas.php">Guias Turisticas</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -107,12 +107,9 @@
 				</section>
 
 			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="https://www.facebook.com/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					</ul>
-				</footer>
+			<?php 
+				include('footer.php');
+			?>
 			<!-- end Footer -->
 
 		</div>

@@ -4,7 +4,7 @@
   ?>
 <html>
 <head>
-	<title>Login</title>
+	<title>Alta</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="../css/main.css" />
@@ -43,13 +43,11 @@
 					</fieldset>
 					</form>
 				</section>	
-   <!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="https://www.facebook.com/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					</ul>
-				</footer>	
+ 	       <!-- Footer -->
+	        <?php 
+				include('../../footer.php');
+			?>
+			<!-- end Footer -->
 
 <!-- Scripts -->
 			<script src="../js/jquery.min.js"></script>

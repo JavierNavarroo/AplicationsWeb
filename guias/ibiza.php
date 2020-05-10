@@ -20,10 +20,10 @@
 								<li>
 									<a href="#" class="icon solid fa-angle-down">Menú</a>
 									<ul>
-										<li><a href="micuenta.html">Mi cuenta</a></li>
-										<li><a href="contacto.html">Contacto</a></li>
-										<li><a href="foro.html">Foro</a></li>
-										<li><a href="nosotros.html">Sobre nosotros</a></li>
+										<li><a href="micuenta.php">Mi cuenta</a></li>
+										<li><a href="contacto.php">Contacto</a></li>
+										<li><a href="foro.php">Foro</a></li>
+										<li><a href="nosotros.php">Sobre nosotros</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -158,6 +158,12 @@
 					</div>					
 				</div>
 			</div>
+
+			<!-- Footer -->
+			<?php 
+				include('footer.php');
+			?>
+			<!-- end Footer -->
 			
 		
 		<!-- Scripts -->
