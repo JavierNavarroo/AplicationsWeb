@@ -2,7 +2,7 @@ $(buscar_vuelos());
 
 function buscar_vuelos(consulta){
     $.ajax({
-        url: 'buscar.php',
+        url: './assets/conf/buscar.php',
         type: 'POST',
         dataType: 'html',
         data: {consulta: consulta},

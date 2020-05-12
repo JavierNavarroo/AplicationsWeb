@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+	<?php 
+    session_start(); 
+	?>
 <html>
 	<head>
 		<title>Contacto</title>
@@ -10,26 +13,15 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header">
-					<h1><a href="index.php">IVELITE</a> tu agencia de viajes</h1>
-					<nav id="nav">
-						<ul>
-							<li>
-								<a href="#" class="icon solid fa-angle-down">Menú</a>
-								<ul>									
-									<li><a href="micuenta.php">Mi cuenta</a></li>
-									<li><a href="foro.php">Foro</a></li>
-									<li><a href="nosotros.php">Sobre nosotros</a></li>
-									<li><a href="guiasturisticas.php">Guias Turisticas</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</header>
+				
+				<?php 
+					include './includes/header.php';
+				?>
 
 			<!-- Main -->
 				<section id="main" class="container medium">
 					<header>
+						<br>
 						<h2>Contáctanos</h2>
 						<p>¿Opiniones? ¿Sugerencias? Ayúdanos a mejorar.</p>
 					</header>
@@ -60,7 +52,7 @@
 
 			<!-- Footer -->
 			<?php 
-				include('footer.php');
+				include './includes/footer.php';
 			?>
 			<!-- end Footer -->
 
@@ -68,13 +60,9 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<?php 
+			include './includes/scripts.php';
+		?>
 
 	</body>
 </html>

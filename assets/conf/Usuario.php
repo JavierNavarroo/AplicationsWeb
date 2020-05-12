@@ -12,7 +12,6 @@ class Usuario
         return false;
     }
 
-
     public static function buscaUsuario($userName)
     { 
         $app = Aplicacion::getSingleton();
@@ -45,7 +44,7 @@ class Usuario
         return self::guarda($user);
     }
     
-    private static function hashPassword($password)
+    public static function hashPassword($password)
     {
         return password_hash($password, PASSWORD_DEFAULT);
     }
@@ -80,15 +79,15 @@ class Usuario
     {
         $app = Aplicacion::getSingleton();
         $conn = $app->conexionBd();
-        $query=sprintf("UPDATE usuarios U SET user = '%s', pass='%s', rol='%s', email='%s' WHERE U.id=%i"
+        $query=sprintf("UPDATE usuarios U SET user = '%s', pass='%s', rol='%s', email='%s' WHERE U.user=%s"
             , $conn->real_escape_string($usuario->userName)
             , $conn->real_escape_string($usuario->email)
             , $conn->real_escape_string($usuario->password)
             , $conn->real_escape_string($usuario->rol)
-            , $usuario->id);
+            , $usuario->userName);
         if ( $conn->query($query) ) {
             if ( $conn->affected_rows != 1) {
-                echo "No se ha podido actualizar el usuario: " . $usuario->id;
+                echo "No se ha podido actualizar el usuario: " . $usuario->userName;
                 exit();
             }
         } else {
@@ -98,18 +97,75 @@ class Usuario
         
         return $usuario;
     }
+
+    public static function nuevoNombre($newName, $oldName)
+    {
+        $app = Aplicacion::getSingleton();
+        $conn = $app->conexionBd();
+        $query=sprintf("UPDATE usuarios U SET user = '%s' WHERE U.user='%s'"
+        , $newName
+        , $oldName);
+
+        $result = false;
+
+        if($conn->query($query))
+        {
+            $result = $newName;
+        }
+
+        return $result;
+    }
+
+    public static function eliminar($usuario)
+    {
+        $app = Aplicacion::getSingleton();
+        $conn = $app->conexionBd();
+
+        //comprobar contraseña
+
+        $query = sprintf("DELETE FROM `usuarios` WHERE `user`= '%s'"
+		, $usuario);
+        $result = false;
+
+        if($conn->query($query))
+        {
+            echo "Se ha eliminado tu cuenta con exito";
+            $result = true;
+        }
+
+        return $result;
+    }
+
+    public static function cambiaPassword($nuevoPassword, $nombre)
+    {
+		$app = Aplicacion::getSingleton();
+        $conn = $app->conexionBd();
+		
+		$hashPass = self::hashPassword($nuevoPassword);
+		
+        $query = sprintf("UPDATE usuarios U SET pass = '%s' WHERE U.user='%s'"
+		, $hashPass
+		, $nombre);
+		
+        if($conn->query($query))
+        {
+            echo "Se ha cambiado tu contraseña con exito";
+            $result = true;
+        }
+		return $result;
+    }
     
-    private $id;
+    public $id;
 
-    private $userName;
+    public $userName;
 
-    private $email;
+    public $email;
 
-    private $password;
+    public $password;
 
-    private $rol;
+    public $rol;
 
-    private function __construct($userName, $email, $password, $rol)
+    public function __construct($userName, $email, $password, $rol)
     {
         $this->userName= $userName;
         $this->email = $email;
@@ -131,13 +187,10 @@ class Usuario
     {
         return $this->userName;
     }
+
     public function compruebaPassword($password)
     {
         return password_verify($password, $this->password);
     }
 
-    public function cambiaPassword($nuevoPassword)
-    {
-        $this->password = self::hashPassword($nuevoPassword);
-    }
 }

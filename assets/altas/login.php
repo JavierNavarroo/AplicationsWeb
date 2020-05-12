@@ -13,6 +13,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="../css/main.css" />
+	<link rel="stylesheet" href="../css/propio.css" />
 </head>
 <body>	
 <body class="landing is-preload">
@@ -37,20 +38,28 @@
 					</nav>
 				</header>
 	<!-- LOGIN -->
-				<section id="banner">
-				<h2>Bienvenido a iVELiTE</h2>
-					<form action="procesarLogin.php" method="POST">
-					<fieldset>
-					<p>Usuario y contraseña</p>
-					<p>Name: <input type="text" name="username" placeholder="Enter your name"/></p>
-					<p>Password: <input type="password" name="password" placeholder="Enter your pass"/></p>
-					<button class="button primary" type="submit">Entrar</button>
-					</fieldset>
-					</form>
-				</section>	
+	<section id="banner">	
+					<h2>Bienvenido a iVELiTE</h2>										
+						<div class="row">
+							<div class="col-5"></div>
+							<div class="col">
+								<div class="caja">						
+									<form action="procesarLogin.php" method="POST">
+										<fieldset>
+											<p>Usuario y contraseña</p>
+											<p>Name: <input type="text" name="username" placeholder="Enter your name"/></p>
+											<p>Password: <input type="password" name="password" placeholder="Enter your pass"/></p>
+											<button class="button primary" type="submit">Entrar</button>
+										</fieldset>
+									</form>	
+								</div>								
+							</div>
+							<div class="col-4"></div>
+						</div>					
+				</section>
    	<!-- Footer -->
 	   <?php 
-				include('../../footer.php');
+				include '../../includes/footer.php';
 			?>
 			<!-- end Footer -->
 

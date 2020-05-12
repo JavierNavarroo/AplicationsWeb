@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+<?php 
+    session_start(); 
+?>
 
 <html>
 	<head>
@@ -12,22 +15,10 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header">
-					<h1><a href="home.php">IVELITE</a> tu agencia de viajes.</h1>
-					<nav id="nav">
-						<ul>
-							<li>
-								<a href="#" class="icon solid fa-angle-down">Menú</a>
-								<ul>
-									<li><a href="micuenta.php">Mi cuenta</a></li>
-									<li><a href="contacto.php">Contacto</a></li>
-									<li><a href="foro.php">Foro</a></li>
-									<li><a href="guiasturisticas.php">Guias Turisticas</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</header>
+			
+			<?php 
+				include './includes/header.php';
+			?>
 
 			<!-- Main -->
 				<section id="main" class="container">
@@ -56,18 +47,9 @@
 											un apasionado de proyectos que solucionan problemas reales.
 											</p>			
 										</div>
-										<br>
+										<br>				
 										<div>
-											<img class="img-right" src = 'images/daniela.jpg'  />
-											<h4>Hola soy <b>Daniela</b></h4>
-											<p>Quito (1996). Antes de formar parte del equipo de iVelite supervisó las
-											operaciones globales y el crecimiento de LATAM. Aprovecha las oportunidades
-											en su entorno de trabajo maravilloso y positivo.										
-											</p>
-										</div>
-										
-										<div>
-											<img class="img-left" src = 'images/cintia.jpg' />
+											<img class="img-right" src = 'images/cintia.jpg' />
 											<h4>Hola soy <b>Cintia</b></h4>
 											<p> Madrid(1994).Es una profesioal de la tecnología con 4 años de 
 											experiencia en el desarrollo, liderazgo, entrega y gestión de 
@@ -75,7 +57,7 @@
 										</div>
 										<br>
 										<div>
-											<img class="img-right" src = 'images/iker.jpg' />
+											<img class="img-left" src = 'images/iker.jpg' />
 											
 											<h4>Hola soy <b>Iker</b></h4>
 											<p> Madrid (1998). Fundador de iVelite. Estudió la carrera de Ingenieria
@@ -87,14 +69,13 @@
 										
 										
 										<div>
-											<img class="img-left"src = 'images/pablo.jpg'  />
+											<img class="img-right"src = 'images/pablo.jpg'  />
 											<h4>Hola soy <b>Pablo</b></h4>
-											<p> Madrid(1998).Trabajo en la NASA en California en la modelizacioón
+											<p> Madrid(1997).Trabajo en la NASA en California en la modelizacioón
 											virtual de operacioes. Pablo es también un activo inversor y su función
 											es administrar cuentas en varios países de Asia.										
 											</p>
 										</div>
-										
 										
 									</div>
 								</section>
@@ -108,20 +89,16 @@
 
 			<!-- Footer -->
 			<?php 
-				include('footer.php');
+				include './includes/footer.php';
 			?>
 			<!-- end Footer -->
 
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<?php 
+			include './includes/scripts.php';
+		?>
 
 	</body>
 </html>

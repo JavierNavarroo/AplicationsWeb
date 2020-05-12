@@ -13,17 +13,17 @@
 		
 			<div id="page-wrapper">
 				<!-- Header -->
-					<header id="header">
-						<h1><a href="home.php">IVELITE</a> tu agencia de viajes.</h1>
+				<header id="header">
+						<h1><a href="../home.php">IVELITE</a> tu agencia de viajes.</h1>
 						<nav id="nav">
 							<ul>
 								<li>
 									<a href="#" class="icon solid fa-angle-down">Menú</a>
 									<ul>
-										<li><a href="micuenta.php">Mi cuenta</a></li>
-										<li><a href="contacto.php">Contacto</a></li>
-										<li><a href="foro.php">Foro</a></li>
-										<li><a href="nosotros.php">Sobre nosotros</a></li>
+										<li><a href="../micuenta.php">Mi cuenta</a></li>
+										<li><a href="../contacto.php">Contacto</a></li>
+										<li><a href="../foro.php">Foro</a></li>
+										<li><a href="../nosotros.php">Sobre nosotros</a></li>
 									</ul>
 								</li>
 							</ul>

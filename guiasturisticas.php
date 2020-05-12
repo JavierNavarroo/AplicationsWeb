@@ -1,75 +1,68 @@
 <!DOCTYPE HTML>
-<!--
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
+<?php 
+    session_start(); 
+?>
+
 <html>
 	<head>
 		<title>Guias Turisticas</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/propio.css" />
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header">
-					<h1><a href="home.php">IVELITE</a> tu agencia de viajes.</h1>
-					<nav id="nav">
-						<ul>
-							<li>
-								<a href="#" class="icon solid fa-angle-down">Menú</a>
-								<ul>
-									<li><a href="micuenta.php">Mi cuenta</a></li>
-									<li><a href="contacto.php">Contacto</a></li>
-									<li><a href="foro.php">Foro</a></li>
-									<li><a href="nosotros.php">Sobre nosotros</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</header>
+			<?php 
+				include 'includes/header.php';
+			?>
 
 			<!-- Main -->
-				<section id="main" class="container">
-					<header>
-						<h2>Nuestra parte de Guias Turisticas</h2>
-						<h2>Estamos en obras...</h2>
-					</header>
+			<section id="main" class="container">
+				<header>
+					<h2>Guías Turísticas</h2>
+				</header>
+				<div class="box">						
 					<div class="row">
-						<div class="col-12">
-
-							<!-- Text -->
-								<section class="box">
-																	
-								</section>
-
+						<div class="col-6">
+							<a target="_blank" href="guias/madrid.php">
+								<img src="images/madrid.jpg"  width="500" height="300">
+							</a>							
+						</div>
+						<div class="col-6">
+							<a target="_blank" href="guias/zaragoza.php">
+								<img src="images/zaragoza.jpg" width="500" height="300">
+							</a>												
 						</div>
 					</div>
+					<br>
 					<div class="row">
-						<div class="col-12">
-
-							
+						<div class="col-6">									
+							<a target="_blank" href="guias/barcelona.php">
+								<img src="images/barcelona.jpg" width="500" height="300">
+							</a>																
+						</div>
+						<div class="col-6">								
+							<a target="_blank" href="guias/ibiza.php">
+								<img src="images/ibiza.jpg" width="500" height="300">
+							</a>	
+						</div>						
+					</div>					
+				</div>							
 				</section>
-
-			<!-- Footer -->
-			<?php 
-				include('footer.php');
-			?>
-			<!-- end Footer -->
-
 		</div>
+		<!-- Footer -->
+		<?php 
+			include 'includes/footer.php';
+		?>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<?php 
+			include 'includes/scripts.php';
+		?>
 
 	</body>
 </html>
