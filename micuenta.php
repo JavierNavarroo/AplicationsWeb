@@ -41,6 +41,8 @@
 						<a href="assets/account/cambiarNombre.php" class="button">Cambiar Nombre</a> 
 						<a href="assets/account/cambiarPass.php" class="button">Cambiar Contraseña</a> 
 						<a href="assets/accounT/eliminarCuenta.php" class="button">Eliminar Cuenta</a>
+						<a href="misviajes.php" class="button">Ver mis viajes</a>
+
 					</div>
 					<div class="row">
 						<div class="col-12">		
@@ -58,13 +60,9 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<?php 
+				include './includes/scripts.php';
+		?>
 
 	</body>
 </html>

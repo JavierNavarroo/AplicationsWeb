@@ -14,7 +14,7 @@
 		<div id="page-wrapper">
 			<!-- Header -->
 			<?php 
-				include('./includes/header.php');
+				include './includes/header.php';
 			?>
 
 			<!-- Banner -->

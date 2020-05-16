@@ -33,7 +33,7 @@
 				<h2>Confirma la eliminacion de su cuenta</h2>
 					<form action="procesarEliminarCuenta.php" method="POST">
 					<fieldset>
-                    <p>contraseña: <input type="password" name="pass" placeholder="Enter your password"/></p>
+                    <p>Contraseña: <input type="password" name="pass" placeholder="Enter your password"/></p>
 					<button class="button primary" type="submit">Confirmar</button>
 					</fieldset>
 					</form>
@@ -47,12 +47,8 @@
 				</footer>	
 
 <!-- Scripts -->
-			<script src="../js/jquery.min.js"></script>
-			<script src="../js/jquery.dropotron.min.js"></script>
-			<script src="../js/jquery.scrollex.min.js"></script>
-			<script src="../js/browser.min.js"></script>
-			<script src="../js/breakpoints.min.js"></script>
-			<script src="../js/util.js"></script>
-			<script src="../js/main.js"></script>				
+	<?php 
+		include './includes/scripts.php';
+	?>			
 </body>
 </html>
