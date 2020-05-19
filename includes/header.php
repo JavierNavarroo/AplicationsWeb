@@ -1,4 +1,12 @@
-<header id="header" class="alt">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+		<header id="header" class="alt">
 					<?php					
 					if (($_SESSION['login']) == true){
 						echo"<h1><a href='home.php'>IVELITE</a> tu agencia de viajes.</h1>";
@@ -16,6 +24,7 @@
 									<li><a href="nosotros.php">Sobre nosotros</a></li>
 									<li><a href="guiasturisticas.php">Guias Turisticas</a></li>
 									<li><a href="misviajes.php">Mis viajes</a></li>
+									<li><a href="rentingcoches.php">Alquiler de coches</a></li>
 								</ul>
 							</li>
 							 
@@ -31,4 +40,6 @@
 
 						</ul>
 					</nav>
-				</header>
+		</header>
+</body>
+</html>

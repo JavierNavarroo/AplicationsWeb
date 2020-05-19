@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
-	<?php 
-    session_start(); 
+<?php 
+	if(!isset($_SESSION)) 
+	{ 
+		session_start(); 
+	} 
 	?>
 <html>
 	<head>
@@ -26,7 +29,7 @@
 						<p>¿Opiniones? ¿Sugerencias? Ayúdanos a mejorar.</p>
 					</header>
 					<div class="box">
-						<form method="post" action="#">
+					<form action="mailto:direcciondelcorreo@correo.com" method="post" enctype="text/plain">
 							<div class="row gtr-50 gtr-uniform">
 								<div class="col-6 col-12-mobilep">
 									<input type="text" name="name" id="name" value="" placeholder="Nombre" />
@@ -42,7 +45,7 @@
 								</div>
 								<div class="col-12">
 									<ul class="actions special">
-										<li><input type="submit" value="Enviar" /></li>
+										<li><input type="submit" id= "boton" value="Enviar" /></li>
 									</ul>
 								</div>
 							</div>

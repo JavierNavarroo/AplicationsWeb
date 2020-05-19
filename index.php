@@ -1,7 +1,11 @@
 <!DOCTYPE HTML>
 		
 <?php 
-  session_start(); 
+   if(!isset($_SESSION)) 
+   { 
+	   session_start(); 
+   } 
+  $_SESSION["login"]=null;
   ?>
 
 <html>
@@ -14,7 +18,7 @@
 		<div id="page-wrapper">
 			<!-- Header -->
 			<?php 
-				include './includes/header.php';
+				include('./includes/header.php');
 			?>
 
 			<!-- Banner -->

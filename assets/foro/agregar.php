@@ -1,7 +1,12 @@
 <!DOCTYPE HTML>
 
 <?php 
-    session_start(); 
+   
+   if(!isset($_SESSION)) 
+   { 
+       session_start(); 
+   } 
+   
     require_once '..\conf\Aplicacion.php';
     require_once '..\conf\Config.php';
     // require_once '.\assets\conf\Config.php';

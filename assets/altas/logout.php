@@ -10,5 +10,7 @@
 	$_SESSION["login"]=false;
         $_SESSION["alta"]=false;
 
+        session_destroy();
+
         header('Location: ../../index.php'); 
 ?>

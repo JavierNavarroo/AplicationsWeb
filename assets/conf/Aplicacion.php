@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Clase que mantiene el estado global de la aplicación.
  */
@@ -67,9 +66,9 @@ class Aplicacion
 	 */
 	public function init($bdDatosConexion)
 	{
-        if ( ! $this->inicializada ) {
+        if ( !$this->inicializada ) {
 			$this->bdDatosConexion = $bdDatosConexion;
-			if(!isset($_SESSION["login"])){
+			if(!isset($_SESSION)){
 				session_start();
 			}
     		$this->inicializada = true;

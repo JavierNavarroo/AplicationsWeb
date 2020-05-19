@@ -28,12 +28,12 @@
 						</ul>
 					</nav>
 				</header>
-	<!-- LOGIN -->
+	<!-- FORMULARIO -->
 				<section id="banner">
 				<h2>Confirma la eliminacion de su cuenta</h2>
 					<form action="procesarEliminarCuenta.php" method="POST">
 					<fieldset>
-                    <p>Contraseña: <input type="password" name="pass" placeholder="Enter your password"/></p>
+                    <p>contraseña: <input type="password" name="pass" placeholder="Enter your password"/></p>
 					<button class="button primary" type="submit">Confirmar</button>
 					</fieldset>
 					</form>
@@ -47,8 +47,12 @@
 				</footer>	
 
 <!-- Scripts -->
-	<?php 
-		include './includes/scripts.php';
-	?>			
+			<script src="../js/jquery.min.js"></script>
+			<script src="../js/jquery.dropotron.min.js"></script>
+			<script src="../js/jquery.scrollex.min.js"></script>
+			<script src="../js/browser.min.js"></script>
+			<script src="../js/breakpoints.min.js"></script>
+			<script src="../js/util.js"></script>
+			<script src="../js/main.js"></script>				
 </body>
 </html>

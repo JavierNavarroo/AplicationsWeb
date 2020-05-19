@@ -8,13 +8,14 @@ $db_pass="";
     $mysqli = new mysqli($db_host,$db_user,$db_pass,$db_name);
 
     $salida = "";
+  
     $query = "SELECT * FROM vuelos ORDER BY Origen";
     
     if (isset($_POST['consulta'])){
         $q = $mysqli->real_escape_string($_POST['consulta']);
-        $query = "SELECT *  FROM vuelos WHERE Origen LIKE '%".$q."%'";
+        $query = "SELECT * FROM vuelos WHERE Origen LIKE '%".$q."%'";
     }
-    
+
     $resultado = $mysqli->query($query);
 
      if ($resultado->num_rows > 0){
@@ -25,6 +26,7 @@ $db_pass="";
                             <td>Destino</td>
                             <td>FechaInicio</td>
                             <td>Precio</td>
+                            <td>Adquirir Vuelo</td>
                         </tr>
                     </thead>
                     <tbody>";
@@ -35,6 +37,7 @@ $db_pass="";
                         <td>".$fila['Destino']."</td>
                         <td>".$fila['FechaInicio']."</td>
                         <td>".$fila['Precio']."</td>
+                        <td><a href='assets/vuelos/comprarvuelo.php?ID=".$fila['idVuelo']."'> Añadir </a></td>
                     </tr>";
     }
     

@@ -7,7 +7,7 @@
 ?>
 <html>
 	<head>
-		<title>Mis viajes</title>
+		<title>Renting de coches</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,17 +25,13 @@
 				<section id="main" class="container">
 					<header>
 						<br>
-						<h2>Bienvenido al espacio reservado para tus viajes</h2>
+						<h2>¿Que coche se ajusta más contigo para tu viaje?</h2>
 					</header>
 					
-					<?php
-					$idVuelo = $_GET['id'];
+                    <div id= "datoscoches">		
+                        <p> AQUI SE MOSTRARAN LOS COCHES DISPONIBLES </p>		
 
-					echo "Usted tiene el viaje asignado con id: $idVuelo";
-
-					?>
-
-
+                    </div>	
 
 					<div class="row">
 					<div class="col-12">
